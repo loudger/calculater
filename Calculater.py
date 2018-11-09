@@ -85,7 +85,7 @@ class Calc:
 
 	# Обработка и высчитывание выражения
 	def treatment(self, expression):
-		while self.search_operation(expression) != False:
+		if self.search_operation(expression) != False:
 			if self.search_operation(expression, 'second_priority') != False:
 				index = self.search_operation(expression, 'second_priority')
 				terms = self.partition(expression, index)
